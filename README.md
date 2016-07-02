@@ -1,6 +1,6 @@
 # Remote control for DragonBoard 410c GPIO pins using Firebase #
-This app allows remote control of GPIO pins of a [Dragonbard 410c device](https://developer.qualcomm.com/hardware/dragonboard-410c) using Firebase.
-GPIO pins 23-32 can be set high or low remotely
+This app allows remote control of GPIO pins of a [Dragonbard 410c device](https://developer.qualcomm.com/hardware/dragonboard-410c) using [Firebase](https://www.firebase.com/).
+GPIO pins 23-34 can be set high or low remotely
 
 ## Usage
 

@@ -20,101 +20,102 @@
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/tv_title"
-        android:rowCount="4"
+        android:rowCount="14"
         android:columnCount="3">
-        <Button
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pin 23"
-            android:id="@+id/bt_pin_23"
+            android:id="@+id/sw_pin_23"
             android:layout_below="@+id/tv_title"
             android:layout_centerHorizontal="true" />
 
-        <Button
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pin 24"
-            android:id="@+id/bt_pin_24"
-            android:layout_below="@+id/bt_pin_23"
+            android:id="@+id/sw_pin_24"
+            android:layout_below="@+id/sw_pin_23"
             android:layout_centerHorizontal="true" />
 
-        <Button
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pin25"
-            android:id="@+id/bt_pin_25"
-            android:layout_below="@+id/bt_pin_24"
+            android:id="@+id/sw_pin_25"
+            android:layout_below="@+id/sw_pin_24"
             android:layout_centerHorizontal="true" />
-        <Button
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pin 26"
-            android:id="@+id/bt_pin_26"
-            android:layout_below="@+id/bt_pin_25"
+            android:id="@+id/sw_pin_26"
+            android:layout_below="@+id/sw_pin_25"
             android:layout_centerHorizontal="true" />
 
-        <Button
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pin 27"
-            android:id="@+id/bt_pin_27"
-            android:layout_below="@+id/bt_pin_26"
+            android:id="@+id/sw_pin_27"
+            android:layout_below="@+id/sw_pin_26"
             android:layout_centerHorizontal="true" />
 
-        <Button
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pin28"
-            android:id="@+id/bt_pin_28"
-            android:layout_below="@+id/bt_pin_27"
+            android:id="@+id/sw_pin_28"
+            android:layout_below="@+id/sw_pin_27"
             android:layout_centerHorizontal="true" />
-        <Button
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pin 29"
-            android:id="@+id/bt_pin_29"
-            android:layout_below="@+id/bt_pin_28"
+            android:id="@+id/sw_pin_29"
+            android:layout_below="@+id/sw_pin_28"
             android:layout_centerHorizontal="true" />
 
-        <Button
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pin 30"
-            android:id="@+id/bt_pin_30"
-            android:layout_below="@+id/bt_pin_29"
+            android:id="@+id/sw_pin_30"
+            android:layout_below="@+id/sw_pin_29"
             android:layout_centerHorizontal="true" />
 
-        <Button
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pin31"
-            android:id="@+id/bt_pin_31"
-            android:layout_below="@+id/bt_pin_30"
+            android:id="@+id/sw_pin_31"
+            android:layout_below="@+id/sw_pin_30"
             android:layout_centerHorizontal="true" />
 
-        <Button
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pin 32"
-            android:id="@+id/bt_pin_32"
-            android:layout_below="@+id/bt_pin_31"
+            android:id="@+id/sw_pin_32"
+            android:layout_below="@+id/sw_pin_31"
             android:layout_centerHorizontal="true" />
 
-        <Button
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pin 33"
-            android:id="@+id/bt_pin_33"
-            android:layout_below="@+id/bt_pin_32"
+            android:id="@+id/sw_pin_33"
+            android:layout_below="@+id/sw_pin_32"
             android:layout_centerHorizontal="true" />
 
-        <Button
+        <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pin 34"
-            android:id="@+id/bt_pin_34"
-            android:layout_below="@+id/bt_pin_33"
+            android:id="@+id/sw_pin_34"
+            android:layout_below="@+id/sw_pin_33"
             android:layout_centerHorizontal="true" />
+
 
     </GridLayout>
 </RelativeLayout>

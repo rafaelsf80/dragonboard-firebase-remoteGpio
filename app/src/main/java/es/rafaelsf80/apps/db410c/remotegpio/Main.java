@@ -28,7 +28,7 @@ import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,7 +47,7 @@ public class Main extends AppCompatActivity {
 
     boolean IS_DRAGONBOARD = false;
 
-    Button btPin23, btPin24, btPin25, btPin26, btPin27, btPin28, btPin29, btPin30, btPin31, btPin32, btPin33, btPin34;
+    Switch swPin23, swPin24, swPin25, swPin26, swPin27, swPin28, swPin29, swPin30, swPin31, swPin32, swPin33, swPin34;
     TextView tvTitle;
     GpioProcessor.Gpio pin;
     Gpio gpio;
@@ -66,25 +66,25 @@ public class Main extends AppCompatActivity {
         String model = new String(Build.MODEL);
         if (model.contains("MSM8916"))
             IS_DRAGONBOARD = true;
-        Log.d(TAG, "Is this a Dragonboard device ? " + String.valueOf(IS_DRAGONBOARD));
+        Log.d(TAG, "Is this a DragonBoard 410c device ? " + String.valueOf(IS_DRAGONBOARD));
 
         checkWifi();
 
-        btPin23 = (Button) findViewById(R.id.bt_pin_23);
-        btPin24 = (Button) findViewById(R.id.bt_pin_24);
-        btPin25 = (Button) findViewById(R.id.bt_pin_25);
-        btPin26 = (Button) findViewById(R.id.bt_pin_26);
-        btPin27 = (Button) findViewById(R.id.bt_pin_27);
-        btPin28 = (Button) findViewById(R.id.bt_pin_28);
-        btPin29 = (Button) findViewById(R.id.bt_pin_29);
-        btPin30 = (Button) findViewById(R.id.bt_pin_30);
-        btPin31 = (Button) findViewById(R.id.bt_pin_31);
-        btPin32 = (Button) findViewById(R.id.bt_pin_32);
-        btPin33 = (Button) findViewById(R.id.bt_pin_33);
-        btPin34 = (Button) findViewById(R.id.bt_pin_34);
+        swPin23 = (Switch) findViewById(R.id.sw_pin_23);
+        swPin24 = (Switch) findViewById(R.id.sw_pin_24);
+        swPin25 = (Switch) findViewById(R.id.sw_pin_25);
+        swPin26 = (Switch) findViewById(R.id.sw_pin_26);
+        swPin27 = (Switch) findViewById(R.id.sw_pin_27);
+        swPin28 = (Switch) findViewById(R.id.sw_pin_28);
+        swPin29 = (Switch) findViewById(R.id.sw_pin_29);
+        swPin30 = (Switch) findViewById(R.id.sw_pin_30);
+        swPin31 = (Switch) findViewById(R.id.sw_pin_31);
+        swPin32 = (Switch) findViewById(R.id.sw_pin_32);
+        swPin33 = (Switch) findViewById(R.id.sw_pin_33);
+        swPin34 = (Switch) findViewById(R.id.sw_pin_34);
 
         Firebase.setAndroidContext(this);
-        final Firebase user1Ref = new Firebase("https://<YOUR-PROJECT>.firebaseio.com/user1");
+        final Firebase user1Ref = new Firebase("https://torid-heat-451.firebaseio.com/user1");
 
         Calendar c = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("dd,MMMM,yyyy hh,mm,a");
@@ -107,18 +107,18 @@ public class Main extends AppCompatActivity {
                      gpio = snapshot.getValue( Gpio.class );
 
                      // updateUI
-                     btPin23.setText("Pin23: " + gpio.getPin23());
-                     btPin24.setText("Pin24: " + gpio.getPin24());
-                     btPin25.setText("Pin25: " + gpio.getPin25());
-                     btPin26.setText("Pin26: " + gpio.getPin26());
-                     btPin27.setText("Pin27: " + gpio.getPin27());
-                     btPin28.setText("Pin28: " + gpio.getPin28());
-                     btPin29.setText("Pin29: " + gpio.getPin29());
-                     btPin30.setText("Pin30: " + gpio.getPin30());
-                     btPin31.setText("Pin31: " + gpio.getPin31());
-                     btPin32.setText("Pin32: " + gpio.getPin32());
-                     btPin33.setText("Pin33: " + gpio.getPin33());
-                     btPin34.setText("Pin34: " + gpio.getPin34());
+                     swPin23.setChecked( ( gpio.getPin23() != 0) );
+                     swPin24.setChecked( ( gpio.getPin24() != 0) );
+                     swPin25.setChecked( ( gpio.getPin25() != 0) );
+                     swPin26.setChecked( ( gpio.getPin26() != 0) );
+                     swPin27.setChecked( ( gpio.getPin27() != 0) );
+                     swPin28.setChecked( ( gpio.getPin28() != 0) );
+                     swPin29.setChecked( ( gpio.getPin29() != 0) );
+                     swPin30.setChecked( ( gpio.getPin30() != 0) );
+                     swPin31.setChecked( ( gpio.getPin31() != 0) );
+                     swPin32.setChecked( ( gpio.getPin32() != 0) );
+                     swPin33.setChecked( ( gpio.getPin33() != 0) );
+                     swPin34.setChecked( ( gpio.getPin34() != 0) );
 
                      alertDialog.setMessage(Integer.toString(gpio.getPin23()) + " " + Integer.toString(gpio.getPin24()) + " " + Integer.toString(gpio.getPin25()) + " " + Integer.toString(gpio.getPin26()) + " " +
                              Integer.toString(gpio.getPin27()) + " " + Integer.toString(gpio.getPin28()) + " " + Integer.toString(gpio.getPin29()) + " " +
@@ -136,7 +136,7 @@ public class Main extends AppCompatActivity {
                  }
              });
 
-        btPin23.setOnClickListener(new View.OnClickListener() {
+        swPin23.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -148,7 +148,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        btPin24.setOnClickListener(new View.OnClickListener() {
+        swPin24.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -160,7 +160,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        btPin25.setOnClickListener(new View.OnClickListener() {
+        swPin25.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -172,7 +172,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        btPin26.setOnClickListener(new View.OnClickListener() {
+        swPin26.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -184,7 +184,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        btPin27.setOnClickListener(new View.OnClickListener() {
+        swPin27.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -196,7 +196,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        btPin28.setOnClickListener(new View.OnClickListener() {
+        swPin28.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -208,7 +208,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        btPin29.setOnClickListener(new View.OnClickListener() {
+        swPin29.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -220,7 +220,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        btPin30.setOnClickListener(new View.OnClickListener() {
+        swPin30.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -232,7 +232,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        btPin31.setOnClickListener(new View.OnClickListener() {
+        swPin31.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -244,7 +244,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        btPin32.setOnClickListener(new View.OnClickListener() {
+        swPin32.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -256,7 +256,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        btPin33.setOnClickListener(new View.OnClickListener() {
+        swPin33.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -268,7 +268,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        btPin34.setOnClickListener(new View.OnClickListener() {
+        swPin34.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
