@@ -84,7 +84,7 @@ public class Main extends AppCompatActivity {
         swPin34 = (Switch) findViewById(R.id.sw_pin_34);
 
         Firebase.setAndroidContext(this);
-        final Firebase user1Ref = new Firebase("https://torid-heat-451.firebaseio.com/user1");
+        final Firebase user1Ref = new Firebase(YOUR_FIREBASE);
 
         Calendar c = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("dd,MMMM,yyyy hh,mm,a");
