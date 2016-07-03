@@ -1,6 +1,6 @@
-# Remote control for DragonBoard 410c GPIO pins using Firebase #
-This app allows remote control of GPIO pins of a [Dragonbard 410c device](https://developer.qualcomm.com/hardware/dragonboard-410c) using [Firebase](https://www.firebase.com/).
-GPIO pins 23-34 can be set high or low remotely
+# Remote control of DragonBoard 410c GPIO pins using Firebase #
+This app allows remote control of GPIO pins of a [DragonBoard 410c device](https://developer.qualcomm.com/hardware/dragonboard-410c) using [Firebase](https://www.firebase.com/).
+DragonBoard provides GPIO pins 23 to 34 to be set high or low remotely
 
 ## Usage
 
@@ -16,7 +16,7 @@ GpioProcessor java class from [here](https://github.com/IOT-410c/IOT-DB410c-Cour
 
 ## Android release
 
-Compilation using gradle and Android Studio
+Tested with a Nexus 6 and DragonBoard 410c equipped with Android 5.1.1
 
 ## Screenshots
 Pending
